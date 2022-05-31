@@ -1,0 +1,57 @@
+h1{
+    font-family: arial;    
+    padding-top: 50px;
+    margin-bottom: 0px;
+}
+/*table*/
+td.spaceTd{
+    width: 25px;
+}
+/*card*/
+div.card{
+    /* margins */
+    margin-top: 50px;
+    /*other*/
+    height: 500px;
+    width: 400px;
+    background-color:rgb(240, 240, 182);
+    border-radius: 10px;
+    /*shadow*/
+    box-shadow: 5px 8px 10px #888888;
+}
+div.upperDiv{
+    margin-bottom: 0px;
+    display: inline-block; /* causes the margins of the <p> elements inside of it - to be effective.*/
+    height: 120px;
+    width: 400px;
+    background-color: rgb(39, 39, 39);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+p.headingCompany{      
+    margin-top: 20px;
+    margin-bottom: 0px;    
+    font-size: 34px;
+    font-family: Arial;
+    color: rgb(255, 255, 255);
+}
+p.headingModel{    
+    margin-top: 8px;
+    font-family: Arial;
+    font-size: 25px;
+    color: rgb(255, 255, 255);
+    
+}
+div.infoDiv{    
+    margin-top: 65px;
+    margin-left: 110px;    
+}
+#MotorcycleInfoDiv{
+    margin-top: 45px;
+}
+p.regular{
+    font-family: arial;
+    font-size: 17px; 
+    margin-bottom: 25px;   
+}

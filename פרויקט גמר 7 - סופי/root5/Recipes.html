@@ -1,0 +1,305 @@
+<HTML>
+ 
+        <HEAD>
+            <TITLE>
+                Coffee Recipes
+            </TITLE>
+        
+            <link rel="stylesheet" href="styleSheet.css">
+
+            <!--Jquary-->
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script>
+            /******hides list on button click*******/
+            $(document).ready(function () {
+                $("#hide").click(function () {
+                    $("ul").hide();
+                });
+            });
+
+            /******shows list on button click*******/
+            $(document).ready(function () {
+                $("#show").click(function () {
+                    $("ul").show();
+                });
+            });
+            
+        </script>
+
+        </HEAD>
+          
+        <BODY>
+
+        <!--Navigation Bar-->
+
+            <!-- Top navigation -->
+            <div class="topnav">
+
+                <!-- Centered link -->
+                <div class="topnav-centered">
+                <a href="frontpage.html" >Home</a>            
+                </div>
+            
+                
+                <!-- Left-aligned links (default) -->
+                <a href="History.html" >History</a>
+                <a href="Gallery.html" >Gallery</a>
+                <a href="Recipes.html" >Recipes</a>
+                <a href="Order.html">Order Beans</a>
+                <a href="CoffeeSongs.html">Songs</a>
+                                   
+            </div>
+
+            <!--Heading-->
+        <center>
+            <h1 class="mainPageHeading">Coffee Recipes</h1>
+        </center>
+
+        <!--Css Animation-->      
+        
+        <center>
+            <div class="animationBox">
+
+                <div class="animationObject">
+                    <img class="animationImage" src="recipesFiles/coffeeBeanForAnimation.png">
+                </div>
+
+            </div>       
+        </center>
+
+        <!--list + javascript event-->
+        <center>
+            <p class="recipesListDescription"> 
+                <b>This is the recipes on the page:</b><br>
+                (<span class ="clickOnText"><u>Click on</u></span> each one to find out how much time the recipe takes.)
+            </p>
+        </center>        
+
+        <!--list-->
+        <center>  
+            <ul class="recipesList">
+                <li id="element" class="listItemRecipes" onclick="cappuccinoFunction()">Cappuccino<br>
+                <p id="cappuccinoTime"></p>
+                </li>
+
+                <li class="listItemRecipes" onclick="icedCoffeeFunction()">Iced coffee<br>
+                    <p id="icedCoffeeTime"></p>
+                </li>
+
+                <li class="listItemRecipes" onclick="mochaFunction()">Mocha<br>
+                    <p id="mochaTime"></p>
+                </li>
+
+                <li class="listItemRecipes" onclick="espressoMartiniFunction()">Espresso Martini<br>
+                    <p id="espressoMartiniTime"></p>
+                </li>
+            </ul>        
+        </center>        
+
+        <!--javascript event (tells how much time to make each recipe)-->
+
+        <script>
+            function cappuccinoFunction() {
+                document.getElementById("cappuccinoTime").innerHTML = "<b>Time to make</b>: 2-3 Minutes.";
+            }
+
+            function icedCoffeeFunction() {
+                document.getElementById("icedCoffeeTime").innerHTML = "<b>Time to make</b>: 5 Minutes, plus cooling.";
+            }
+
+            function mochaFunction() {
+                document.getElementById("mochaTime").innerHTML = "<b>Time to make</b>: 3-4 Minutes.";
+            }
+
+            function espressoMartiniFunction() {
+                document.getElementById("espressoMartiniTime").innerHTML = "<b>Time to make</b>: 10 Minutes.";
+            }
+        </script>      
+
+        <!--Hide + show Button-->
+        <center>
+            <button id="hide" class="recipesButton">Click here to Hide the list</button>
+            <button id="show" class="recipesButton">Click here to Show the list</button>
+            </center>
+        
+
+
+
+
+        <!--Text-->   
+        <center>   
+        <div class="recipesTextDiv"> <!--a div that cointains the main text and frames it-->
+        
+            <h2 class="recipesPageSubHeading">Cappuccino</h2><!--Sub-heading-->
+            <hr><!--Horizontal line--> 
+            <!--Image-->
+            <img class="recipesImage" src="recipesFiles/cappuccino.png">
+            <h3 class="recipesPageTextBIG" ><u>Ingredients</u><br></h3>           
+            <p class="recipesPageText">             
+                18g ground espresso (or 1 espresso pod)<br>
+                150ml milk<br><br>
+            <b>To serve</b><br><br>
+                cocoa powder (optional)<br><br>
+            <b>You will also need</b><br><br>
+                the right cup , 200-250ml capacity
+            </p>
+
+            <h3 class="recipesPageTextBIG" ><br><u>Method</u><br></h3>
+            
+            <p class="recipesPageText"> 
+            <b>STEP 1</b><br><br>
+            Make around 35ml espresso using a coffee machine and pour it into the base of your cup.<br><br>
+
+            <b>STEP 2</b><br><br>
+            Steam the milk with the steamer attachment so that it has around 4-6cm of foam on top.<br> 
+            Hold the jug so that the spout is about 3-4cm above the cup and pour the milk in steadily.<br>
+            As the volume within the cup increases, bring the jug as close to the surface of the drink as possible whilst aiming to pour into the centre.<br> 
+            Once the milk jug is almost touching the surface of the coffee, tilt the jug to speed up the rate of pour. <br>
+            As you accelerate, the milk will hit the back of the cup and start naturally folding in on itself to create a pattern on the top. <br>
+            Dust the surface with a little cocoa powder if you like.
+            </p>
+
+        
+            <h2 class="recipesPageSubHeading">Iced coffee</h2><!--Sub-heading-->
+            <hr><!--Horizontal line-->
+            <!--Image-->
+            <img class="recipesImage" src="recipesFiles/icedCoffee.png">
+
+            <h3 class="recipesPageTextBIG" ><u>Ingredients</u><br></h3>
+            <p class="recipesPageText">             
+            200ml strong black coffee.<br>
+            50ml milk.<br>
+            ice.<br>
+            maple syrup, optional.
+            </p>
+
+            <h3 class="recipesPageTextBIG" ><br><u>Method</u><br></h3>
+            <p class="recipesPageText">  
+                <b>STEP 1</b><br><br>
+                Make a 200ml cup of black coffee following pack instructions, then allow the coffee to go completely cold. <br>
+                Pour into a blender with the milk along with 2 or 3 handfuls of ice and maple syrup, if using, then blend until smooth and foamy.<br><br>
+                
+                <b>STEP 2</b><br><br>
+                Pour into a chilled tall glass and serve.
+            </p>
+
+
+            <h2 class="recipesPageSubHeading">Mocha</h2><!--Sub-heading-->
+            <hr><!--Horizontal line-->
+            <!--Image-->
+            <img class="recipesImage" src="recipesFiles/mocha.png">
+
+            <h3 class="recipesPageTextBIG" ><u>Ingredients</u><br></h3>
+            <p class="recipesPageText">             
+                18g ground espresso, or 1 espresso pod.<br>
+                250ml milk.<br>
+                1 tsp drinking chocolate.<br><br>
+
+                <b>You will also need</b><br><br>
+
+                large cup, 300-350ml capacity.
+            </p>
+
+            <h3 class="recipesPageTextBIG" ><br><u>Method</u><br></h3>
+            <p class="recipesPageText">  
+                <b>STEP 1</b><br><br>
+                Make around 35ml espresso using a coffee machine and pour into the base of your cup.<br> 
+                Add the drinking chocolate and mix well until smooth.<br><br>
+                
+                <b>STEP 2</b><br><br>
+                Steam the milk with the steamer attachment so that it has around 4-6cm of foam on top. <br>
+                Hold the jug so that the spout is about 3-4cm above the cup and pour the milk in steadily. <br>
+                As the volume within the cup increases, bring the jug as close to the surface of the drink as possible whilst aiming into the centre. <br>
+                Once the milk jug is almost touching the surface of the coffee, tilt to speed up the rate of pour. <br>
+                As you accelerate, the milk will hit the back of the cup and start naturally folding in on itself to create a pattern on the top.
+            </p>
+
+
+
+            <h2 class="recipesPageSubHeading">Espresso Martini</h2><!--Sub-heading-->
+            <hr><!--Horizontal line-->
+            <!--Image-->
+            <img class="recipesImage" src="recipesFiles/Espresso martini.png">
+
+            <h3 class="recipesPageTextBIG" ><u>Ingredients</u><br></h3>
+            <p class="recipesPageText">             
+                <b>For the sugar syrup</b><br><br>
+                100g golden caster sugar.<br><br>
+
+                <b>For the cocktail</b><br><br>
+
+                ice.<br>
+                100ml vodka.<br>
+                50ml freshly brewed espresso coffee.<br>
+                50ml coffee liqueur (we used Kahlua).<br>
+                4 coffee beans (optional).
+            </p>
+
+            <h3 class="recipesPageTextBIG" ><br><u>Method</u><br></h3>
+            <p class="recipesPageText">  
+                <b>STEP 1</b><br><br>
+                Start by making the sugar syrup. <br>
+                Put the caster sugar in a small pan over a medium heat and pour in 50ml water. <br>
+                Stir, and bring to the boil.<br><br>
+                
+                <b>STEP 2</b><br><br>
+                Turn off the heat and allow the mixture to cool. <br>
+                Put 2 martini glasses in the fridge to chill.<br><br>
+
+                <b>STEP 3</b><br><br>
+                Once the sugar syrup is cold, pour 1 tbsp into a cocktail shaker along with a handful of ice, the vodka, espresso and coffee liqueur. <br>
+                Shake until the outside of the cocktail shaker feels icy cold.<br><br>
+
+
+                <b>STEP 4</b><br><br>
+                Strain into the chilled glasses. <br>
+                Garnish each one with coffee beans if you like.
+            </p>
+        </div>
+        </center>  
+
+        <!--Call to action Button with setInterval-->
+        <center>            
+            <div class="callToActionContainer">
+                <h2 class="regular" id="callToActionH2">Want to Buy Quality Coffee Beans Right Now?</h1>            
+                <button class="callToAction" id="callToActionBtn" onclick="window.location.href = ('Order.html')">Buy Now</button>
+            </div>        
+        </center>
+        <!--button scrtipt-->
+        <script>              
+            function flickerInterval(){ // function is called at the bottom of script tag            
+                setInterval(
+                    function(){
+                        document.getElementById('callToActionBtn').style.backgroundColor = 'rgba(255,186,186, 0.4)';                       
+                        document.getElementById('callToActionBtn').style.boxShadow = '4px 6px 8px #888888';                        
+                        animate(20,25,-0.5)
+                        setTimeout(
+                            function(){
+                                document.getElementById('callToActionBtn').style.backgroundColor = 'white';
+                                document.getElementById('callToActionBtn').style.boxShadow = '0px 0px';
+                                document.getElementById('callToActionH2').style.marginBottom = '20px';
+                                animate(10,15,1)
+                            }
+                        ,500);
+                    }
+                ,2000)
+                
+            }                                 
+
+            function animate(loops,distance,step){ // function is called inside the flicker interval function
+                if (loops <= 0)
+                    return                                                
+                document.getElementById('callToActionH2').style.marginBottom = distance + 'px';
+                setTimeout(() => {
+                    animate(loops-1,distance + step,step)
+                }, 10);                
+            }
+                        
+
+            var x = document.getElementById('callToActionBtn');
+            x.onload = flickerInterval();
+        </script>
+
+        </BODY>
+          
+         </HTML>

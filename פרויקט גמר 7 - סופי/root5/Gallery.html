@@ -1,0 +1,344 @@
+<HTML>
+ 
+        <HEAD>
+            <TITLE>
+                Coffee Gallery
+            </TITLE>
+        
+            <link rel="stylesheet" href="styleSheet.css">
+        </HEAD>
+          
+        <BODY>
+
+            <!--Navigation Bar-->
+
+            <!-- Top navigation -->
+            <div class="topnav">
+
+                <!-- Centered link -->
+                <div class="topnav-centered">
+                <a href="frontpage.html" class="active">Home</a>            
+                </div>
+            
+                
+                <!-- Left-aligned links (default) -->
+                <a href="History.html">History</a>
+                <a href="Gallery.html">Gallery</a>
+                <a href="Recipes.html">Recipes</a>
+                <a href="Order.html">Order Beans</a>
+                <a href="CoffeeSongs.html">Songs</a>
+                                   
+            </div>
+
+        <!--Heading-->
+        <center>
+            <h1 class="mainPageHeading">Coffee Gallery</h1>
+        </center>
+
+        <!--text-->
+        <center>
+        <h6 class="galerryUsabillityText">To get Information about the image, move the cursor to it.</h6>
+        </center>
+
+        <!--Table + Gallery-->
+        <center>
+        <div class="galleryDiv">
+            <table class="galleryTable">
+
+                <tr><!--Table Row Top-->
+
+                    <!--Top Left Image-->
+                <td>
+                    <div class="container">
+                        <img class="galleryImage" src="galleryFiles/Espresso.jpg">
+                        <div class="overlay">
+                            <div class="hoverText">Espresso</div>
+                        </div>
+                    </div>                    
+                </td>
+                     <!--Top Center Image-->
+                <td>
+                    <div class="container">
+                        <img class="galleryImage" src="galleryFiles/cappuccino.jpg">
+                        <div class="overlay">
+                            <div class="hoverText">Cappuccino</div>
+                        </div>
+                    </div>
+                </td>
+                    <!--Top Right Image-->
+                <td>
+                    <div class="container">
+                        <img class="galleryImage" src="galleryFiles/americano.jpg">
+                        <div class="overlay">
+                            <div class="hoverText">Americano</div>
+                        </div>
+                    </div>                  
+                </td>
+
+                </tr><!--END OF Table Row Top-->
+
+                <tr><!--Table Row Bottom-->
+
+                        <!--Bottom Left Image-->
+                    <td>
+                        <div class="container">
+                            <img class="galleryImage" src="galleryFiles/BlackCoffee.jpg">
+                            <div class="overlay">
+                                <div class="hoverText">Black Coffee</div>
+                            </div>
+                        </div>    
+                    </td>
+                        <!--Bottom Center Image-->
+                    <td>
+                        <div class="container">
+                            <img class="galleryImage" src="galleryFiles/iceCoffe.jpg">
+                            <div class="overlay">
+                                <div class="hoverText">Ice Coffe</div>
+                            </div>
+                        </div>   
+                    </td>
+                        <!--Bottom Right Image-->
+                    <td>
+                        <div class="container">
+                            <img class="galleryImage" src="galleryFiles/croissant.jpg">
+                            <div class="overlay">
+                                <div class="hoverText">Croissant</div>
+                            </div>
+                        </div>                           
+                    </td>
+                </tr><!--END OF Table Row Bottom-->
+                
+            </table>
+        </div>
+        </center>
+
+        <!--second gallery (flex container)-->
+        
+        <center>
+            <h1 class="mainPageHeading">Coffee Bags Gallery</h1>
+        </center>
+
+        <center>
+            <h6 class="galerryUsabillityText">Resize the window, to see how the wrap effect.</h6>
+        </center>
+
+        <div class="flex-container">
+            <div class="gallery2imageDiv">
+                <img class="gallery2image" src="galleryFiles/bag1.jpg">
+            </div>
+            <div class="gallery2imageDiv">
+                <img class="gallery2image" src="galleryFiles/bag2.jpg">
+            </div>
+            <div class="gallery2imageDiv">
+                <img class="gallery2image" src="galleryFiles/bag3.jpg">
+            </div>
+            <div class="gallery2imageDiv">
+                <img class="gallery2image" src="galleryFiles/bag4.jpg">
+            </div>
+            <div class="gallery2imageDiv">
+                <img class="gallery2image" src="galleryFiles/bag5.jpg">
+            </div>
+            <div class="gallery2imageDiv">
+                <img class="gallery2image" src="galleryFiles/bag6.jpg">
+            </div> 
+            <div class="gallery2imageDiv">
+                <img class="gallery2image" src="galleryFiles/bag7.jpg">
+            </div> 
+            <div class="gallery2imageDiv">
+                <img class="gallery2image" src="galleryFiles/bag8.jpg">
+            </div>           
+        </div>
+                
+
+        <!--canvas-->
+
+        <center>
+            <h1 class="mainPageHeading" id="canvasHeading">Canvas coffee cups</h1>
+
+            <h6 class="galerryUsabillityText">Click on the buttons, to increase/decrease coffee cups amount</h6>
+
+            <P class="regular" id="coffeeCupsCounter" onload="setCounterP()"><b>1</b></P>
+            <Div id="cupButtonsDiv">
+                <input type="button" id="increaseBtn" value=" + " onclick="increase()">
+                <input type="button" id="decreaseBtn" value=" - " onclick="decrease()"/> 
+            </Div>
+
+            <div id="canvasAlerSpaceDiv">
+                <p class="regular" id="minMaxAlert"></p>
+            </div>
+            
+            
+        </center>    
+
+        <center>
+            <canvas id="canvas1"></canvas>
+        </Center>
+        
+        <img id='imageTest'>
+
+        <!--canvas script-->
+        <script>
+            const canvas = document.getElementById('canvas1')
+            const c = canvas.getContext('2d')
+
+            //image objects array
+            sources = [] 
+            cupsNum = 1 // for initiation of the array with *cupsNum* number of image objects                      
+            //init image objects array
+            for (var i = 0; i<cupsNum;i++){
+                sources[i] = 'galleryFiles/cup4.png'
+            }                 
+
+            canvas.width = 500
+            canvas.height = 500            
+            
+            //table image object
+            var table = new Image()
+            table.src = 'galleryFiles/table.png'
+
+            // cup image objecu
+            var cup = new Image()
+            cup.src = 'galleryFiles/cup4.png'
+
+            // DONT USE in animation
+            // cups drawing function (ONLY used for static canvas - not animation)            
+            function loadImages(sources,count) { 
+                var images = [];
+                var loadedImages = 0;
+                var numImages = 0;                                
+                var i = 0
+                var j = 0
+
+                // draw position variables
+                var distance = 5
+                var width = 75
+                var height = 75                               
+                var totalCupsWidth = (width * count) + distance * (count-1)
+                var beginXPosition = (canvas.width -totalCupsWidth) /2
+
+                // get num of sources
+                for(var src in sources) {
+                    numImages++;
+                }
+
+                //load images into objects, and draw them after their all loaded
+                for(var src in sources) {
+                    images[j] = new Image();
+                    images[j].onload = function() {
+                        if(++loadedImages >= numImages) {                                       
+                            for(var src in sources) {                                 
+                                c.drawImage(images[i],beginXPosition + ((width + distance) * i),225,width,height) 
+                                //c.drawImage(images[src],i*100,250,50,50) 
+                                i++
+                                if(i>=count)
+                                    break
+                            }
+                        }
+                    };
+                images[j].src = sources[src]; //images[src].src = sources[src];          
+                j++
+                }
+            }                
+
+            //update cups
+            function updateCups(num){
+                
+                // cup draw position variables
+                var distance = 2.5
+                var width = 75
+                var height = 75                               
+                var totalCupsWidth = (width * num) + distance * (num-1)
+                var beginXPosition = (canvas.width -totalCupsWidth) /2
+
+                for (var i = 0; i<num; i++){
+                    c.drawImage(cup,beginXPosition + ((width + distance) * i),225,75,75)
+                }                 
+            }
+
+            //set cups num
+            function updateCupsNum(num){
+                cupsNum = num
+            }
+
+            //increase cupsNum
+            function increase(){
+                if (cupsNum < 5){
+                    cupsNum++                   
+                    document.getElementById('coffeeCupsCounter').style.fontWeight = "bold" 
+                    document.getElementById('coffeeCupsCounter').innerHTML = cupsNum
+
+                    document.getElementById('minMaxAlert').hidden = true
+                }
+                else if (cupsNum>=5){                    
+                    document.getElementById('minMaxAlert').innerHTML = 'Max cups amount: 5 cup'
+                    document.getElementById('minMaxAlert').hidden = false
+                    document.getElementById('minMaxAlert').style.color = 'red'
+                    
+                    setTimeout(
+                    function() {
+                        document.getElementById('minMaxAlert').style.color = 'black'
+                    }    
+                    ,150)                    
+                }
+            }
+            //decrease cupsNum
+            function decrease(){
+                if (cupsNum > 1){
+                    cupsNum--
+                    document.getElementById('coffeeCupsCounter').style.fontWeight = "bold" 
+                    document.getElementById('coffeeCupsCounter').innerHTML = cupsNum
+
+                    document.getElementById('minMaxAlert').hidden = true
+                }
+                else if (cupsNum<=1){
+                    document.getElementById('minMaxAlert').innerHTML = 'Min cups amount: 1 cup'
+                    document.getElementById('minMaxAlert').hidden = false
+                    
+                    document.getElementById('minMaxAlert').style.color = 'red'
+                    
+                    setTimeout(
+                    function() {
+                        document.getElementById('minMaxAlert').style.color = 'black'
+                    }    
+                    ,150)  
+                }
+            }
+
+            //setting the <p> counter element to cupsNum function
+            //set cups num
+            function setCounterP(){
+                document.getElementById('coffeeCupsCounter').innerHTML = cupsNum
+            }
+
+            //animation function
+            function animate(){
+                window.requestAnimationFrame(animate);
+
+                c.fillStyle = 'black'
+                c.fillRect(0,0,canvas.width,canvas.height)
+
+                //draw background
+                c.fillStyle = '#7ED96F'
+                c.fillRect(0,0,canvas.width,canvas.height)      
+                
+                //draw floor
+                c.fillStyle = '#4C8C41'
+                var floorHeight = 165
+                c.fillRect(0,canvas.height-floorHeight,canvas.width,floorHeight)
+
+                //draw table        
+                c.drawImage(table,(canvas.width-460)/2,70,450,450)
+
+                //draw cups             
+                updateCups(cupsNum)
+            }  
+            
+            animate()
+            
+    </script>
+
+        </script>
+
+        </BODY>
+          
+         </HTML>

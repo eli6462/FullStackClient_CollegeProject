@@ -1,0 +1,160 @@
+<HTML>
+ 
+        <HEAD>
+            <TITLE>
+                Coffe Songs
+            </TITLE>
+        
+            <link rel="stylesheet" href="styleSheet.css">
+        </HEAD>
+          
+        <BODY>
+
+            <!--Navigation Bar-->
+
+            <!-- Top navigation -->
+            <div class="topnav">
+
+                <!-- Centered link -->
+                <div class="topnav-centered">
+                <a href="frontpage.html" class="active">Home</a>            
+                </div>
+            
+                
+                <!-- Left-aligned links (default) -->
+                <a href="History.html">History</a>
+                <a href="Gallery.html">Gallery</a>
+                <a href="Recipes.html">Recipes</a>
+                <a href="Order.html">Order Beans</a>
+                <a href="CoffeeSongs.html">Songs</a>
+                                   
+            </div>
+
+            <!--Heading-->
+        <center>
+            <h1 class="mainPageHeading">Coffe Songs!</h1>
+        </center>
+
+        <!--select for song year (onchange event)-->
+        <center>
+            <p class="audioDescriptionText" id="songYearSelect">You can select a song to find out it's year of release</p>
+            <select name="songYear" id="songYearSelector" onchange="setYear()">
+                <option hidden>Select a song:</option>
+                <option value="1946">The Coffee Song - Frank Sinatra</option>
+                <option value="1962">One Cup Of Coffee- Bob Marley & The Wailers</option>
+                <option value="1960">Black Coffee - Ella Fitzgerald</option>                                
+            </select>
+            <p class="audioDescriptionText" id="songYearText">Song year:</p>
+
+            <script>
+                //change song year text based on song selection
+                function setYear(){
+                    var year = document.getElementById('songYearSelector').value;
+                    document.getElementById('songYearText').innerHTML = 'Song year: ' + year;
+                }
+            </script>
+        </center>
+        
+        <!--Show/hide singer details scripts (called in onmouseenter/leave parameters in the images)-->
+        <script>
+            //a script that shows the details of the singer onmouseenter on image
+            function show(id){
+                document.getElementById(id).hidden = false;
+            }
+            //a script that hides the details of the singer onmouseleave on image
+            function hide(id){
+                document.getElementById(id).hidden = true;
+            }
+        </script>
+        
+        <!--Audio Coffee Songs-->
+        <center>
+        <br>
+        <p class="audioDescriptionText"><b>Please Enjoy this Songs About Coffee!</b></p>
+        <p class="audioDescriptionText">(You can move the mouse on the image to see singer details)</p>
+            <br><br><br><br>
+        <p class="audioDescriptionText"><b>The Coffee Song - Frank Sinatra.</b></p>           
+        
+        </p>
+        </center>
+
+        
+        <Center>
+        <img class ="songsImage" src="songsFiles/frankSinatra.jpg" onmouseenter="show('singer1')" onmouseleave="hide('singer1')"><!--First Image-->
+        </Center>
+
+        <!--details (hidden - shown when onmouseenter on image )-->
+        <center>
+            <p hidden  class="singerDescriptionText" id="singer1">
+                <b>Name:</b> Frank Sinatra <br>
+                <b>Born:</b> December 12, 1915 <br>
+                <b>Years Active:</b> 1935–1995
+            </p>
+        </center>
+
+        <center>
+        <audio controls>            
+            <source src="songsFiles/theCoffeeSong.mp3" type="audio/mpeg">            
+          </audio>
+        </center>
+
+        <!--Second Song-->
+        <center>
+            <br><br>
+        <p class="audioDescriptionText">
+            <b>One Cup Of Coffee- Bob Marley & The Wailers</b>
+        </p>
+        </center>
+
+        <Center>
+            <img class ="songsImage" src="songsFiles/bobMarley.jpg" onmouseenter="show('singer2')" onmouseleave="hide('singer2')" ><!--Second Image-->
+            </Center>
+        
+        <!--details (hidden - shown when onmouseenter on image )-->
+        <center>
+            <p hidden class="singerDescriptionText" id="singer2">
+                <b>Name:</b> Bob Marley <br>
+                <b>Born:</b> 6 February, 1945 <br>
+                <b>Years Active:</b> 1962–1981
+            </p>
+        </center>
+        
+        <center>
+        <audio controls>            
+            <source src="songsFiles/oneCupOfCoffee.mp3" type="audio/mpeg">            
+          </audio>
+        </center>
+
+        <!--Third Song-->
+        <div id="thirdSongContainer">
+            <center>
+                <br><br>
+            <p class="audioDescriptionText">
+                <b>Black Coffee - Ella Fitzgerald</b>
+            </p>
+            </center>
+    
+            <Center>
+                <img class ="songsImage" src="songsFiles/ellaFitzgerald.jpg" onmouseenter="show('singer3')" onmouseleave="hide('singer3')" ><!--Third Image-->
+                </Center>
+        
+             <!--details (hidden - shown when onmouseenter on image )-->
+             <center>
+                <p hidden class="singerDescriptionText" id="singer3">
+                    <b>Name:</b> Ella Fitzgerald <br>
+                    <b>Born:</b> April 25, 1917 <br>
+                    <b>Years Active:</b> 1929–1995
+                </p>
+            </center>
+    
+            <center>
+            <audio controls>            
+                <source src="songsFiles/blackCoffee.mp3" type="audio/mpeg">            
+              </audio>
+            </center>            
+        </div>
+        
+
+        </BODY>
+          
+         </HTML>

@@ -1,0 +1,533 @@
+
+/*---------General--------*/
+
+h1.regular{
+    font-family: arial;
+}
+h2.regular{
+    font-family: arial;
+}
+h3.regular{
+    font-family: arial;
+}
+p.regular{
+    font-family: arial;
+}
+
+/********NAVIGATION BAR********/
+
+/* Add a black background color to the top navigation */
+.topnav {
+    position: relative;
+    background-color: #333;
+    overflow: hidden;
+  }
+  
+  /* Style the links inside the navigation bar */
+  .topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    font-family: arial;
+  }
+  
+  /* Change the color of links on hover */
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+   
+  
+  /* Centered section inside the top navigation */
+  .topnav-centered a {
+    float: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #8a6a45;
+  }
+
+  p.navText{
+      font-family: arial;
+  }
+
+  /*********END OF_NAVIGATION BAR**********/
+
+h1.mainPageHeading {
+    font-family: Arial;
+    margin-top:100px;
+}
+
+
+p.imageCaption{
+    font-family:Arial;
+    margin-top:10px;
+    margin-bottom:50px;
+    text-align: center;
+    color:rgb(105, 105, 105);
+}
+
+div.endOfPageSpaceDiv{
+    height:50px;
+}
+
+/*---------FrontPage--------*/
+
+
+
+img.mainPageImage{
+    width:300px;
+    margin-top:25px;
+}
+
+p.mainPageText{
+    font-family: Arial;
+    margin-top:50px;
+}
+
+img.changingImage{
+    margin-top: 25px;
+}
+
+h2.bottomText{
+    font-family: arial;
+    margin-top: 35px;
+    margin-bottom: 50px;    
+}
+
+
+/*---------HistoryPage--------*/
+
+img.historyPageImage{
+    width:750px;
+    margin-top:50px;
+}
+
+div.historyPageTextDiv{
+    width:750px;
+}
+
+video.historyOfCoffeeVideo{
+    margin-top:50px;
+}
+
+p.historyPageBUTTON_DESCRIPTIONText{
+    text-align: center;
+    font-family: arial;
+}
+
+h2.historyPageSubHeading{
+    font-family: Arial;
+    margin-top:50px; 
+}
+
+p.historyPageText{
+    font-family: Arial;
+    text-align: left;
+    line-height:120%;
+}
+
+img.historyPageMainTextImage{
+    width:750px;
+    margin-top: 50px;
+}
+
+/* bubble / capture */
+
+#bubbleCaptureDescription{
+    margin-bottom: 50px;
+    
+}
+
+div.bubblingContainerDiv{
+    width:500px;
+    height:500px;
+}
+
+div.bubbleCaptureDiv{
+    border-radius: 10px;
+    margin:25px;
+    padding: 5px;
+}
+#bubble1{
+    background-color:#ebb579;
+}
+#bubble2{
+    background-color:#c79a66;
+}
+#bubble3{
+    background-color:#a78157;
+}
+#bubble4{
+    background-color:#8f6f4b;
+}
+#bubble5{
+    background-color:#775d40;
+}
+
+p.spaceP{
+    font-size: 50px;
+}
+
+
+#capture5{
+    background-color:#ebb579;
+}
+#capture4{
+    background-color:#c79a66;
+}
+#capture3{
+    background-color:#a78157;
+}
+#capture2{
+    background-color:#8f6f4b;
+}
+#capture1{
+    background-color:#775d40;
+}
+
+p.buubleCaptureText{
+    font-family: arial;    
+    padding-top: 10px;
+    color:black;    
+}
+
+/*canvas*/
+#canvasHeading{
+    margin-bottom: 25px;
+}
+
+#cupButtonsDiv{
+    margin-bottom: 25px;   
+}
+
+#canvasAlerSpaceDiv{
+    height: 40px;
+}
+
+#canvas1{
+    margin-bottom: 75px;
+}
+/*---------Gallery--------*/
+
+div.galleryDiv{
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+table.galleryTable,td{
+    border: 1px solid black;
+    border-collapse: collapse;
+    border-color: grey;
+}
+
+h6.galerryUsabillityText{
+    font-family: Arial;
+    margin-top:50px;
+}
+
+/****HOVER EFFECT****/
+div.container {
+    position: relative;
+    width: 100%;
+  }
+
+img.galleryImage {
+    display: block;
+    width: 100%;
+    height: auto;    
+  }
+  
+div.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0%;
+    transition: .5s ease;
+    background-color: #8a6a45;
+  }
+
+div.container:hover .overlay { /* on hover - .overlay div css is applied */
+    opacity:75%;
+  }
+
+div.hoverText {
+    font-family: Arial;
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  
+/**** END OF_HOVER EFFECT****/
+
+/*second gallery*/
+
+
+
+.flex-container {    
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: 50px;
+    margin-right: 50px;
+    border-radius: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: rgb(196, 196, 196);
+    justify-content: center;
+}
+
+    .flex-container > div.gallery2imageDiv {               
+        margin: 10px;
+        text-align: center;
+        line-height: 75px;       
+        width: 350px;
+        height:350px;      
+        border-radius: 10px;  
+    }
+
+img.gallery2image{
+    width: 350px;
+    height:350px;    
+    border-radius: 10px;
+}
+
+/*canvas*/
+#coffeeCupsNum{
+    margin:20px;
+}
+
+#canvas{
+    border-radius: 20px;
+}
+
+/*---------Order--------*/
+
+img.descriptionImage{
+    height:150px;
+}
+
+p.descriptionText{
+    font-family: Arial;
+    margin-top:50px;
+}
+
+span.alertText{
+    color: red;
+}
+
+div.marqueeDiv{
+    width: 500px;
+}
+hr.marueeBannerLine{    
+    background-color: red;
+    border: 2px solid red;
+    width: 500px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+#marqueeText{
+    color:red;
+}
+
+/******FORM*******/
+
+
+form{
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+fieldset {
+    width:300px;
+    border-radius:5px;
+    background-color:lightgrey;
+}
+
+legend {
+    text-align: center;
+    font-family: Arial;
+}
+
+p.form-text{
+    font-family:Arial;
+    margin-bottom:3px;
+}
+
+input.button {
+    background-color:red;
+    color:white;
+    border-radius:5px;
+}
+
+/******END 0F_FORM*******/
+
+
+/*---------Recipes--------*/
+
+/*******ANIMATION*******/
+
+div.animationBox{  
+    margin-top: 50px;  
+    width: 750px;
+}
+
+div.animationObject{
+    margin-left: 0px;
+    width: 100px;
+    height: 100px;    
+    position: relative;
+    animation-name: rotatingBean;
+    animation-duration: 7s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes rotatingBean {
+    0%   {left:0px;}  
+    20%   {left:375px;transform: rotate(180deg);}  
+    40%  {left:0px;transform: rotate(0deg);}    
+    80% {left:-375px;;transform: rotate(-180deg);}
+    100%{left:0px;;transform: rotate(0deg);} 
+}
+
+img.animationImage{
+    height: 100px;
+}
+
+/*******END OF_ANIMATION*******/
+
+
+p.recipesListDescription{
+    text-align: center;
+    font-family: arial;
+    margin-top: 50px;
+}
+
+span.clickOnText{
+    color: red;
+}
+
+ul.recipesList { /*centers the list*/    
+    display: table;
+    margin: 0 auto;
+    margin-top: 25px;
+  }
+
+li.listItemRecipes{
+    font-family: arial;
+}
+
+
+/********BUTTONS*********/
+button.recipesButton{
+    margin-top: 25px;
+}
+
+#hide{
+    background-color: red;
+    color: white;
+}
+
+#show{
+    background-color: green;
+    color: white;
+}
+
+
+/********END OF_BUTTONS*******/
+
+
+div.recipesTextDiv{
+    width:750px;
+    margin-bottom: 50px;
+}
+
+h2.recipesPageSubHeading{
+    font-family: Arial;
+    margin-top:50px; 
+}
+
+img.recipesImage{
+    width:372px;
+    margin-bottom: 25px;
+    margin-top: 25px;
+}
+
+h3.recipesPageTextBIG{
+    font-family: Arial;
+    text-align: left;
+}
+
+p.recipesPageText{
+    font-family: Arial;
+    text-align: left;
+    line-height:120%;
+}
+
+div.callToActionContainer{
+    height: 125px;
+    margin-bottom:  30px;
+}
+
+#callToActionH2{
+    margin-bottom: 25px;
+}
+
+button.callToAction{
+    font-size: 20px;
+    background-color: white;
+    color:#ff0000;
+    border-color: #ff0000;
+    padding: 10px;
+    border-radius: 5px;        
+}
+
+/*--------Coffee Songs--------*/
+#songYearSelect{
+    margin-top: 40px;    
+}
+#songYearSelector{    
+    margin-top: 10px;
+}
+#songYearText{    
+    margin-top: 25px;
+}
+p.singerDescriptionText{
+    font-family: arial;
+    margin-top: 25px;
+    margin-bottom: 25px;    
+    line-height:200%;
+}
+
+p.audioDescriptionText{
+    font-family: arial;
+}
+
+p.cofeeInfoText{
+    font-family: arial;
+    line-height:120%;
+    text-align: left;
+}
+
+img.songsImage{
+    height:200px;
+}
+#thirdSongContainer{
+    height: 500px;    
+}
+
+/*---------Checkout Window---------*/

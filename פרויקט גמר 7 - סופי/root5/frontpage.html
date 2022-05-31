@@ -1,0 +1,112 @@
+<HTML>
+ 
+<HEAD>
+    <TITLE>
+        Coffee Time
+    </TITLE>
+
+    <link rel="stylesheet" href="styleSheet.css">
+    
+</HEAD>
+  
+<BODY>
+
+    <!--Navigation Bar-->
+
+            <!-- Top navigation -->
+            <div class="topnav">
+
+                <!-- Centered link -->
+                <div class="topnav-centered">
+                <a href="frontpage.html" class="active">Home</a>            
+                </div>
+            
+                
+                <!-- Left-aligned links (default) -->
+                <a href="History.html">History</a>
+                <a href="Gallery.html">Gallery</a>
+                <a href="Recipes.html">Recipes</a>
+                <a href="Order.html">Order Beans</a>
+                <a href="CoffeeSongs.html">Songs</a>
+                                   
+            </div>
+
+<!--Heading-->
+<center>
+    <h1 class="mainPageHeading">Coffee Time</h1>
+</center>
+
+<!--Image-->
+<center>
+    <img class = "mainPageImage" src = "front page image.png"> 
+</center>
+
+<!--Main Text-->
+<center>
+    <p class = "mainPageText">
+        <b>Coffe time </b>- your online place for coffee.<br><br>        
+        This site contains all the information you need about coffee,<br>        
+        Including - 
+        <a href="History.html">The history of coffee</a>, 
+        <a href="CoffeeSongs.html">Songs About Coffee</a>,<br>
+        <a href="Gallery.html">A Coffee Image gallery</a>, 
+        <a href="Recipes.html">Coffee recipes</a> and even an option to 
+        <a href="Order.html">order Quality Coffe Beans.</a>
+    </p>
+</center>
+
+<!--Image Description-->
+<center>
+<p class = "mainPageText">
+    Hover Mouse on Image to Enlarge it!
+</p>
+</center>
+
+<!--Changing Image-->
+<script> 
+
+    var i = 0;
+    var pics = new Array();
+    
+    pics[0] = "recipesFiles/cappuccino.png";
+    pics[1] = "recipesFiles/mocha.png";
+    pics[2] = "recipesFiles/icedCoffee.png";
+    pics[3] = "recipesFiles/Espresso martini.png";
+ 
+    function swapImage() {
+        document.slide.src = pics[i];
+        if (i < pics.length - 1)
+            i++;
+        else i = 0;
+        setTimeout("swapImage()", 1800);
+    }
+    
+    window.onload = swapImage;
+    
+</script> 
+
+<center>
+    <img onmouseenter="bigImg(this)" onmouseleave="normalImg(this)" class="changingImage" name="slide" width="350"  height="250" />
+</center>
+
+<!--Changing Image big/small Event-->
+    <script>
+        function bigImg(x) {
+            x.style.height = "500px";
+            x.style.width = "700px";
+        }
+
+        function normalImg(x) {
+            x.style.height = "250px";
+            x.style.width = "350px";
+        }
+    </script>
+
+<!--Botttom text-->
+<center>
+<h2 class="bottomText">Enjoy our Coffee site!</h2>
+</center>
+
+</BODY>
+  
+ </HTML>

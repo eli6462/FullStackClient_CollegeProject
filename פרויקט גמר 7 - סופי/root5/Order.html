@@ -1,0 +1,159 @@
+<HTML>
+ 
+        <HEAD>
+            <TITLE>
+                Order Coffee Beans
+            </TITLE>
+        
+            <link rel="stylesheet" href="styleSheet.css">
+        </HEAD>
+          
+        <BODY>
+
+            <!--Navigation Bar-->
+
+            <!-- Top navigation -->
+            <div class="topnav">
+
+                <!-- Centered link -->
+                <div class="topnav-centered">
+                <a href="frontpage.html" class="active">Home</a>            
+                </div>
+            
+                
+                <!-- Left-aligned links (default) -->
+                <a href="History.html">History</a>
+                <a href="Gallery.html">Gallery</a>
+                <a href="Recipes.html">Recipes</a>
+                <a href="Order.html">Order Beans</a>
+                <a href="CoffeeSongs.html">Songs</a>
+                                   
+            </div>
+            
+            <!--Heading-->
+        <center>
+            <h1 class="mainPageHeading">Order Coffee Beans</h1>
+        </center>
+
+        <!--Image-->
+        <center>
+        <img class="descriptionImage" src="orderFiles/coffeeBeansBag.png">
+        </center>
+
+        <!--Description Text-->
+        <center>
+        <p class="descriptionText">
+            Please enter your order details,<br>
+            And we will contact you by Phone - <br>
+            For order confirmation, Payment and Shipping Details.<br><br>
+
+            <span class="alertText">Attention!</span>  All Form Fields Must be filled Out, Or the form won't be sent.
+        </p>
+        </center>
+
+        <!-- marquee banner-->        
+        <center>
+            <hr class="marueeBannerLine">
+            <div class="marqueeDiv">
+                <marquee>
+                    <p class="regular" id="marqueeText"><b>Free Shipping on All Orders - Until 12pm!!</b></p>                    
+                </marquee>
+            </div>
+            <hr class="marueeBannerLine">
+        </center>
+       
+        
+
+        <!--form-->
+        <center>
+            <form name="myForm" onsubmit="return validateForm()" method="post">
+        
+                <fieldset>
+                    <legend>Please Enter your Order Details:</legend>
+        
+                    <br />
+                    <p class="form-text">Enter your ID Number:</p>
+                    <!--^[0-9]+$-->
+                    <input class="box" id="id" onfocus="changeColorBrown('id')" onblur="changeColorWhite('id')" type="text" name="id"  pattern="^\d{9}$" title="Must be 9 digits">
+                    <br><br />
+                    <p class="form-text">Enter your Full Name:</p>
+                    <input class="box" type="text" id="name" onfocus="changeColorBrown('name')" onblur="changeColorWhite('name')" pattern="^[a-zA-Z]+ [a-zA-Z]+$" title="Must be only letters - and only first and last name(with one space in between)"  name="fullname">
+                    <br><br />
+                    <p class="form-text">Enter your Email:</p>
+                    <input class="box" type="email" id="email" onfocus="changeColorBrown('email')" onblur="changeColorWhite('email')" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Must be a valid Email address" name="email">
+                    <br /><br />
+                    <p class="form-text">Enter your Phone Number:</p>
+                    <input class="box" id="phone" onfocus="changeColorBrown('phone')" onblur="changeColorWhite('phone')" type="text" pattern="^\d{9,13}$" title="Must be a phone number between 9 and 13 digits - ONLY DIGITS allowed" name="phone number">
+                    <br><br />
+        
+                    <p class="form-text">Chose your Coffee Beans Type:</p>
+                    <select name="beansTypes" id ="select" onfocus="changeColorBrown('select')" onblur="changeColorWhite('select')">
+                        <option value="arabica">Arabica - 510 g - 24.90$</option>
+                        <option value="robusta">Robusta - 510 g - 24.90$</option>
+                        <option value="liberica">Liberica - 510 g - 24.90$</option>
+                        <option value="excelsa">Excelsa - 510 g - 24.90$</option>                    
+                    </select>
+                    <br><br>
+                            
+                    <p class="form-text">Enter Number of Coffee Bean Bags:</p>
+                    <input type="number" id="number" onfocus="changeColorBrown('number')" onblur="changeColorWhite('number')" min="1" max="20" value="1" />                              
+                         
+                    <br><br>
+                    <input class="button" type="submit" value="Send Now"> <!--window open function inside the validate form function - called in the upper <form> tag - in the onsubmit parameter -->
+                </fieldset>
+            </form>
+            </center>
+            
+            <script>
+                //open window on checkout
+                function openWindow(){
+                    window.open('CheckoutWindow.html');
+                }
+
+                //change color to brown (used in onfocus)
+                function changeColorBrown(id){
+                    document.getElementById(id).style.backgroundColor = '#e8b564';
+                }
+                //change color to white (used in on blur)
+                function changeColorWhite(id){
+                    document.getElementById(id).style.backgroundColor = 'white';
+                }
+
+            </script>
+
+            <!--Form Validation using JavaScript-->
+            <script>
+            function validateForm() {
+
+                let id = document.forms["myForm"]["id"].value;
+                if (id == "") {
+                  alert("ID must be filled out");
+                  return false;
+                }
+
+                let name = document.forms["myForm"]["fullname"].value;
+                if (name == "") {
+                  alert("Name must be filled out");
+                  return false;
+                }
+
+                let email = document.forms["myForm"]["email"].value;
+                if (email == "") {
+                  alert("Email must be filled out");
+                  return false;
+                }
+
+                let pNumber = document.forms["myForm"]["phone number"].value;
+                if (pNumber == "") {
+                  alert("Phone Number must be filled out");
+                  return false;
+                }
+                // open checkout window
+                window.open('CheckoutWindow.html');
+              }
+            </script>
+
+
+        </BODY>
+          
+         </HTML>
